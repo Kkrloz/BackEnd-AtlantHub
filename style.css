@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #1a54d4; /* primeiro */
+  --color-2: #174abd; /* segundo */
+  --color-3: #1441a5; /* terceiro */
+  --color-4: #11388e; /* quarto */
+  --color-5: #0f2f76; /* quinto */
+  --color-6: #0c255e; /* sexto */
+  --color-7: #091c47; /* sétimo */
+  --color-8: #06132f; /* oitavo */
+  --color-9: #030918; /* nono */
+  --color-10: #000000; /* décimo */
+
+  --white-1: #ffffff; /* branco puro */
+  --white-2: #f9f9f9; /* quase branco */
+  --white-3: #ededed; /* cinza bem claro */
+  --white-4: #e6e6e6; /* cinza claro */
+  --white-5: #d9d9d9; /* cinza médio-claro */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-3);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--white-2);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leme-atlant {
+  height: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo h1 {
+  font-size: 32px;
+  color: var(--color-7);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.pesquisar-div {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 32px;
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  background-color: var(--white-5);
+  border-radius: 24px;
+}
+
+.pesquisar-div input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--white-5);
+  padding: 8px;
+  font-size: 14px;
+}
+
+.fa-magnifying-glass {
+  color: var(--color-7);
+}
+
+.categorias-div {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-8);
+}
+
+.categorias-div nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 8px 32px;
+}
+
+.botao-categorias {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  border-radius: 24px;
+  color: var(--white-3);
+  background: none;
+  padding: 12px 0px;
+  cursor: pointer;
+  width: 14rem;
+  justify-content: center;
+}
+
+.botao-categorias:hover {
+  background-color: #dfdfdf23;
+}
+
+.botao-categorias.ativo {
+  background-color: var(--color-7);
+}
+
+.secao-hero {
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 14%,
+    rgba(0, 89, 184, 1) 100%,
+    rgba(13, 13, 158, 1) 100%
+  );
+  color: white;
+  text-align: center;
+  padding: 48px 32px;
+}
+
+footer {
+  background-color: var(--color-8);
+  color: white;
+  text-align: center;
+  padding: 32px;
+}
+
+.produtos {
+  width: 100%;
+  max-width: 1200px;
+  padding: 32px;
+  margin: 0 auto;
+}
+
+.produtos-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.cartao-produto {
+  background-color: var(--white-2);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.cartao-produto:hover {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transform: translateY(-16px);
+}
+
+.imagem-produto {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.info-produto {
+  padding: 16px;
+}
+
+.nome-produto {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.descricao-produto {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.preco-produto {
+  font-size: 20px;
+  color: var(--color-7);
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.botao-produto {
+  width: 100%;
+  background-color: var(--color-5);
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+  border: none;
+}
+
+.botao-produto:hover {
+  background-color: var(--color-3);
+}
+
+.user-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+  flex-direction: column;
+}
+
+.icon-user {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.options-div {
+  position: absolute;
+  height: 0;
+  width: 15rem;
+  margin-top: 21rem;
+  overflow: hidden;      
+  pointer-events: none;  
+}
+
+.options-div.ativo {
+  background-color: var(--white-4);
+  height: 17rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.552) 0px 3px 8px;
+  animation: slideGrowDown 0.7s ease-out forwards;
+  transform-origin: top center;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+@keyframes slideGrowDown {
+  0% {
+    transform: translateY(-10px) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.options-div.saindo {
+  animation: slideGrowUp 0.5s ease-in forwards;
+}
+
+@keyframes slideGrowUp {
+  0% {
+    transform: translateY(0) scaleY(1); 
+  }
+  100% {
+    transform: translateY(-10px) scaleY(0);
+  }
+}
+
+.options-secoes {
+  padding-top: 0.6rem;
+  border-bottom: solid rgba(0, 0, 0, 0.088) 1px;
+  cursor: pointer;
+}
+.options-secoes:hover {
+  background-color: var(--white-5);
+}
+
+.option-ctg {
+  padding: 0.5rem;
+}
+
+.options-config {
+  border: none
+}
+
+.link-meusPedidos {
+  text-decoration: none;
+  color: black
+}
