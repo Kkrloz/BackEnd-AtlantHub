@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #1a54d4; /* primeiro */
+  --color-2: #174abd; /* segundo */
+  --color-3: #1441a5; /* terceiro */
+  --color-4: #11388e; /* quarto */
+  --color-5: #0f2f76; /* quinto */
+  --color-6: #0c255e; /* sexto */
+  --color-7: #091c47; /* sétimo */
+  --color-8: #06132f; /* oitavo */
+  --color-9: #030918; /* nono */
+  --color-10: #000000; /* décimo */
+
+  --white-1: #ffffff; /* branco puro */
+  --white-2: #f9f9f9; /* quase branco */
+  --white-3: #ededed; /* cinza bem claro */
+  --white-4: #e6e6e6; /* cinza claro */
+  --white-5: #d9d9d9; /* cinza médio-claro */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white-3);
+  line-height: 1.6;
+}
+
+header {
+  background: #020024;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 14%,
+    rgba(0, 89, 184, 1) 100%,
+    rgba(13, 13, 158, 1) 100%
+  );
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leme-atlant {
+  height: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo h1 {
+  font-size: 32px;
+  color: var(--white-2);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.pesquisar-div {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 32px;
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  background-color: var(--white-5);
+  border-radius: 24px;
+}
+
+.pesquisar-div input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--white-5);
+  padding: 8px;
+  font-size: 14px;
+}
+
+.user-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+  flex-direction: column;
+}
+
+.icon-user {
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--white-3);
+}
+
+.options-div {
+  position: absolute;
+  height: 0;
+  width: 15rem;
+  margin-top: 21rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.options-div.ativo {
+  background-color: var(--white-4);
+  height: 17rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.552) 0px 3px 8px;
+  animation: slideGrowDown 0.7s ease-out forwards;
+  transform-origin: top center;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+@keyframes slideGrowDown {
+  0% {
+    transform: translateY(-10px) scaleY(0);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.options-div.saindo {
+  animation: slideGrowUp 0.5s ease-in forwards;
+}
+
+@keyframes slideGrowUp {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    transform: translateY(-10px) scaleY(0);
+  }
+}
+
+.options-secoes {
+  padding-top: 0.6rem;
+  border-bottom: solid rgba(0, 0, 0, 0.088) 1px;
+  cursor: pointer;
+}
+.options-secoes:hover {
+  background-color: var(--white-5);
+}
+
+.option-ctg {
+  padding: 0.5rem;
+}
+
+.options-config {
+  border: none;
+}
+
+.navegacao {
+  color: gray;
+  display: flex !important;
+  gap: 0.4rem;
+}
+
+.navegacao a {
+  text-decoration: none;
+  color: gray;
+}
+
+.link-meusPedidos {
+  text-decoration: none;
+  color: black;
+}
+
+.secao-opcoes {
+  background-color: var(--white-2);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.secao-pedidos {
+  background-color: var(--white-2);
+  height: 30rem;
+  justify-content: center;
+  border-radius: 1rem;
+  display: flex;
+}
+
+.pedidos-status {
+  margin-top: 1rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.ctg-pedidos.ativado {
+  border-bottom: #091c47 3px solid;
+}
+
