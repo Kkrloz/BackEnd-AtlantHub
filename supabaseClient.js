@@ -1,4 +1,6 @@
-import { createClient } from "@supabase/supabase-js";
+// Usar versão ESM do Supabase via CDN para rodar direto no navegador
+// (necessário quando o site é servido sem bundler, ex: GitHub Pages)
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
 // Pegue essas informações no painel do Supabase: Settings > API
 const supabaseUrl = "https://qatfptamutggnytlhlij.supabase.co";
