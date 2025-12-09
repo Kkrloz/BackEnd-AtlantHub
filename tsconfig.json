@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./built",
+    "allowJs": true,
+    "checkJs": false,
+    "target": "es5",
+    "ignoreDeprecations": "6.0",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "module": "es2020",
+    "rootDir": ".",
+    "strict": false,
+    "esModuleInterop": true
+  },
+  "include": ["script/**/*", "pages/**/*", "*.js", "**/*.ts"],
+  "exclude": ["node_modules", "built"]
+}
